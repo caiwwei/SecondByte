@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SecondBite</title>
+  <link rel="stylesheet" href="../AndroidStudioProjects/SecondByte/app/src/main/assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h1>SecondBite</h1>
+    <nav>
+      <button id="tab-inventory">Inventory</button>
+      <button id="tab-recipes">Recipes</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inventory-section" class="tab-content">
+      <h2>Inventory</h2>
+      <form id="inventory-form">
+        <div class="input-row">
+          <input type="text" id="ingredient-name" placeholder="Ingredient name" required />
+          <div class="quantity-input-group">
+            <input type="number" id="ingredient-quantity" placeholder="Qty" min="1" required />
+            <span class="unit-label">units</span>
+          </div>
+          <button type="submit" class="add-button">Add Items</button>
+        </div>
+      </form>      
+      <div id="ingredient-grid"></div>
+    </section>
+
+    <section id="recipes-section" class="tab-content hidden">
+        <h2>Recipes</h2>
+        <form id="recipe-form">
+            <div class="input-row">
+            <input type="text" id="recipe-name" placeholder="Recipe name" required />
+            <button type="submit" class="add-button">Create Recipe</button>
+            </div>
+        </form>
+        
+        <div id="add-ingredient-panel" class="hidden">
+            <h3 id="selected-recipe-name">Add ingredients to: [Recipe]</h3>
+            <div class="input-row">
+            <input type="text" id="recipe-ingredient-name" placeholder="Ingredient name" />
+            <div class="quantity-input-group">
+                <input type="number" id="recipe-ingredient-quantity" placeholder="Qty" min="1" />
+                <span class="unit-label">units</span>
+            </div>
+            <button type="button" class="add-button" id="add-ingredient">Add Ingredient</button>
+            </div>
+        </div>
+        
+        <div id="recipe-grid"></div>
+        
+          
+        <div id="recipe-grid"></div>
+      </section>      
+
+  <script src="../AndroidStudioProjects/SecondByte/app/src/main/assets/js/app.js"></script>
+  <script src="../AndroidStudioProjects/SecondByte/app/src/main/assets/js/inventory.js"></script>
+  <script src="../AndroidStudioProjects/SecondByte/app/src/main/assets/js/recipes.js"></script>
+</body>
+</html>
